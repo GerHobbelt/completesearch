@@ -553,7 +553,7 @@ AC_Class.prototype.processInput = function (event)
   		//   NO! Does not work, because right after the onkeypress event, the input field is *not* up to date
   		//
   		// NEW 09Oct06 (Holger): kk != k means one of ALT, SHIFT, CTRL is/was pressed
-                  // NEW 30May07 (Holger): prevented query launch for ö etc, Alt+Tab etc. no longer
+                  // NEW 30May07 (Holger): prevented query launch for Ã¶ etc, Alt+Tab etc. no longer
                   // a problem because a query is now only launched when there is actually a change
   		if (/* k == kk && */ ( k == 8 || k == 13 || k == 32 || k >= 48 )) //if (k == 0 || k == 8)
   		{
@@ -1288,10 +1288,10 @@ AC_Class.prototype.requestReturned = function ()
               // NEW 03-12-07 (Markus): Resize the height of the hit box and detail box
 							resizeHeight();
 						}
-						else // Daten wurden nicht ordnungsgemäß oder unvollständig empfangen (z.B. wegen abort)
+						else // Daten wurden nicht ordnungsgemÃ¤ÃŸ oder unvollstÃ¤ndig empfangen (z.B. wegen abort)
 						{
-							this.log_write ("Daten wurden nicht ordnungsgemäß oder unvollständig empfangen (z.B. wegen abort): " + xmlHttpRequest.status, this.log.levels.FATAL);
-							document.getElementById('autocomplete_H_boxes_1_title').innerHTML = "Daten wurden nicht ordnungsgemäß oder unvollständig empfangen (z.B. wegen abort): " + xmlHttpRequest.responseText;
+							this.log_write ("Daten wurden nicht ordnungsgemÃ¤ÃŸ oder unvollstÃ¤ndig empfangen (z.B. wegen abort): " + xmlHttpRequest.status, this.log.levels.FATAL);
+							document.getElementById('autocomplete_H_boxes_1_title').innerHTML = "Daten wurden nicht ordnungsgemÃ¤ÃŸ oder unvollstÃ¤ndig empfangen (z.B. wegen abort): " + xmlHttpRequest.responseText;
 							// Set the used XMLHttpRequest object to state "idle"
 							this.setXMLHttpRequestIdle (this.XMLHttpRequestContainers[i].request_id);
 						}
@@ -1913,7 +1913,7 @@ AC_Class.prototype.updateHash = function(query_string, query_type, query_index, 
     var box = query_type + query_index;
     var v = (typeof(first_hit) == "undefined") ? max_completion_show : max_completion_show + "." + first_hit;
     if (hash.indexOf(box) >= 0) {
-      // There is already a paramter for this box, so replace it
+      // There is already a parameter for this box, so replace it
       hash = hash.replace(new RegExp(box + "\.[^:]*"), box + "." + v);
     }
     else {

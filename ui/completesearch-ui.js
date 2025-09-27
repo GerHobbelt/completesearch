@@ -144,7 +144,7 @@ class Backend {
 
   // Get hits.
   get_hits(query_string, num_hits, first_hit) {
-    // Build URL from paramters
+    // Build URL from parameters
     var url = global.base_url
                 + "?q=" + query_string
                 + "&h=" + num_hits
@@ -166,7 +166,7 @@ class Backend {
 
   // Get completions for given facet.
   get_completions(query_string, num_completions, facet_name) {
-    // Build URL from paramters
+    // Build URL from parameters
     var url = global.base_url
                 + "?q=" + query_string
                 + "&h=0"
